@@ -12,11 +12,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   search(searchTerm: any): Observable<string[]> {
-
     if (searchTerm === '') {
       return of([]);
     }
-
+    
     return this.http.get<string[]>(`${this.baseurl}cities?search=${searchTerm}`);
   }
 }
