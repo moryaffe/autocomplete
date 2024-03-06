@@ -18,12 +18,5 @@ export class DataService {
     }
 
     return this.http.get<string[]>(`${this.baseurl}cities?search=${searchTerm}`);
-    // .pipe(
-    //   map(response => response)
-    // );
-  }
-
-  getData(offset: number, limit: number) {
-    return this.http.get<any[]>(`${this.baseurl}items?offset=${offset}&limit=${limit}`);
   }
 }
