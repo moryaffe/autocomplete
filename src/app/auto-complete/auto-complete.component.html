@@ -1,0 +1,28 @@
+<div class="autocomplete-wrapper">
+  <input type="text"
+         [formControl]="searchControl"
+         (focus)="isDropdownVisible = true"
+         [attr.aria-expanded]="isDropdownVisible ? 'true' : 'false'"
+         aria-autocomplete="list"
+         role="combobox"
+         class="autocomplete-input"
+         [size]="width"
+         aria-label="Search input">
+
+  <div *ngIf="filteredOptions$ | async as options">
+    <cdk-virtual-scroll-viewport *ngIf="options.length && isDropdownVisible"
+                                 [ngStyle]="{'height': (options.length * itemSize) + 'px'}"
+                                 [itemSize]="itemSize"
+                                 class="autocomplete-viewport"
+                                 role="listbox">
+      <ul class="autocomplete-results">
+        <li *cdkVirtualFor="let option of options"
+            (click)="selectItem(option)"
+            role="option"
+            [attr.aria-selected]="searchControl.value === option ? 'true' : 'false'">
+          {{ option }}
+        </li>
+      </ul>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>

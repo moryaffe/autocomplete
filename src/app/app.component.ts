@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'auto-complete';
+  city: string = '';
+
+  constructor() {
+  }
+
+  getChosenCity(chosenCity: string) {
+    this.city = chosenCity;
+  }
 }

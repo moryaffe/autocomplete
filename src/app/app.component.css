@@ -1,0 +1,19 @@
+.main {
+    padding-left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: inline-flex;
+    width: 100%;
+    min-height: 100%;
+ 
+    align-items: center;
+    box-sizing: inherit;
+    position: relative;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+}

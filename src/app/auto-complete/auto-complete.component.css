@@ -1,0 +1,41 @@
+.autocomplete-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    z-index: 1050px;
+  }
+  
+  .autocomplete-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .autocomplete-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .autocomplete-results li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  
+  .autocomplete-results li:hover {
+    background-color: #eee;
+  }
+
+  .autocomplete-viewport {
+    max-height: 300px; /* Maximum height */
+    min-height: 40px; /* Minimum height to ensure viewport is visible */
+    overflow: auto; 
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  
+  
