@@ -35,7 +35,8 @@ export class AutoCompleteComponent implements OnInit {
   handleValueChange(value: string): Observable<string[]> {
     if (this.preventSpecialCharacters(value)) {
       let err = "Input contains special characters. Only English letters, numbers, and spaces are allowed.";
-      throw Error(err);
+      console.error(err);
+      return of([]);
     }
     return this.dataService.search(value);
   }
